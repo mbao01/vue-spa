@@ -1,32 +1,11 @@
 <template>
   <div id="root">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <div id="nav">
-      <router-link to="/"> Home</router-link>
-      <router-link to="/contact">Contact </router-link>
+    <img class="m-auto" alt="Vue logo" src="./assets/logo.png" />
+    <div id="app" class="p-6">
+      <router-link to="/" class="px-4">Home</router-link>
+      <router-link to="/about" class="px-4">About</router-link>
+      <router-link to="/store" class="px-4">Store</router-link>
     </div>
     <router-view />
   </div>
 </template>
-
-<!-- <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
-export default {
-  name: "App",
-  components: {
-    HelloWorld,
-  },
-};
-</script> -->
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
