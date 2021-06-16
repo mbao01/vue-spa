@@ -22,6 +22,8 @@
 </template>
 
 <script>
+import { add } from "lodash";
+
 export default {
   name: "Product",
   props: {
@@ -29,7 +31,7 @@ export default {
   },
   computed: {
     accountInUSD() {
-      return "$" + this.product.price;
+      return "$" + add(this.product.price, 10);
     },
   },
 };
