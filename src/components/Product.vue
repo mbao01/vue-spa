@@ -22,6 +22,9 @@
 </template>
 
 <script>
+// const add = import("lodash/add").then((m) => m.add);
+// console.log(add(5, 10));
+
 export default {
   name: "Product",
   props: {
