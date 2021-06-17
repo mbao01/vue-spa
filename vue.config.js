@@ -1,7 +1,29 @@
-/* vue.config.js */
+var PrerenderSpaPlugin = require("prerender-spa-plugin");
+var path = require("path");
+
 module.exports = {
-  // Delete the prefetch plugin
-  chainWebpack: (config) => {
+  configureWebpack: (config) => {
     config.plugins.delete("prefetch");
+
+    if (process.env.NODE_ENV !== "production") return;
+
+    return {
+      plugins: [
+        new PrerenderSpaPlugin({
+          // Absolute path to compiled SPA
+          staticDir: path.resolve(__dirname, "dist"),
+          // List of routes to prerender
+          routes: ["/", "/about", "/store"],
+        }),
+      ],
+    };
+  },
+  devServer: {
+    inline: true,
+    hot: true,
+    stats: "minimal",
+    contentBase: __dirname,
+    overlay: true,
+    historyApiFallback: true,
   },
 };
