@@ -25,7 +25,7 @@ module.exports = {
           // Don't inline critical font-face rules, but preload the font URLs:
           preloadFonts: true,
         }),
-        new GimbalPlugin({ bail: true }),
+        // new GimbalPlugin({ bail: true }),
       ],
     };
   },
