@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col w-60 h-64 shadow-xl rounded-md my-3 mx-auto">
     <div class="h-4/6 overflow-hidden p-1">
-      <img :alt="product.title" :src="product.image" class="w-full" />
+      <AsyncImage :alt="product.title" :src="product.image" />
     </div>
 
     <div class="flex flex-col w-100 justify-between h-2/6 px-2">
@@ -22,6 +22,12 @@
 </template>
 
 <script>
+import { defineAsyncComponent } from "vue";
+
+const AsyncImage = defineAsyncComponent(() =>
+  import("../components/Image.vue" /* webpackChunkName: "image" */)
+);
+
 export default {
   name: "Product",
   props: {
@@ -31,6 +37,9 @@ export default {
     accountInUSD() {
       return "$" + this.product.price;
     },
+  },
+  components: {
+    AsyncImage,
   },
 };
 </script>
