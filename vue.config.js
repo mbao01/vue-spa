@@ -1,5 +1,6 @@
 var Critters = require("critters-webpack-plugin");
 var PrerenderSpaPlugin = require("prerender-spa-plugin");
+var GimbalPlugin = require("webpack-gimbal-plugin");
 var path = require("path");
 
 module.exports = {
@@ -19,10 +20,11 @@ module.exports = {
         new Critters({
           // Outputs: <link rel="preload" onload="this.rel='stylesheet'">
           preload: "swap",
-    
+
           // Don't inline critical font-face rules, but preload the font URLs:
           preloadFonts: true,
         }),
+        new GimbalPlugin({ bail: true }),
       ],
     };
   },
@@ -34,3 +36,4 @@ module.exports = {
     overlay: true,
     historyApiFallback: true,
   },
+};

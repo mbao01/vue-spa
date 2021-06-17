@@ -1,0 +1,31 @@
+# Specify audits to run
+audits:
+  - size
+  - lighthouse
+
+configs:
+  # Lighthouse settings
+  lighthouse:
+    skipAudits:
+      - uses-http2
+      - redirects-http
+      - uses-long-cache-ttl
+      - uses-text-compression
+    outputHtml: artifacts/lighthouse.html
+    threshold:
+      performance: 96
+      "best-practices": 96
+
+  # Size settings
+  size:
+    - path: ./dist/app*.js
+      maxSize: 10 KB
+    - path: ./dist/
+      maxSize: 3 MB
+
+# Locations of reports.
+outputs:
+  # Only show complete report in CLI
+  cli:
+    onlyFailures: false
+  html: artifacts/results.html

@@ -23,12 +23,11 @@
 
 <script>
 import { defineAsyncComponent } from "vue";
+import { add } from "lodash";
 
 const AsyncImage = defineAsyncComponent(() =>
   import("../components/Image.vue" /* webpackChunkName: "image" */)
 );
-
-import { add } from "lodash";
 
 export default {
   name: "Product",

@@ -1,0 +1,120 @@
+{
+  "data": [
+    {
+      "data": [
+        {
+          "label": "dist/favicon.ico",
+          "rawLabel": "/Users/mbao01/Workspace/Modus Create/Brownbag Events/vue-spa/dist/favicon.ico",
+          "rawThreshold": 10240,
+          "rawValue": "864B",
+          "success": true,
+          "threshold": "10 KB",
+          "thresholdLimit": "upper",
+          "value": "864 B",
+          "type": "size"
+        },
+        {
+          "label": "dist/index.html",
+          "rawLabel": "/Users/mbao01/Workspace/Modus Create/Brownbag Events/vue-spa/dist/index.html",
+          "rawThreshold": 10240,
+          "rawValue": "403B",
+          "success": true,
+          "threshold": "10 KB",
+          "thresholdLimit": "upper",
+          "value": "403 B",
+          "type": "size"
+        },
+        {
+          "label": "dist",
+          "rawLabel": "/Users/mbao01/Workspace/Modus Create/Brownbag Events/vue-spa/dist",
+          "rawThreshold": 18874368,
+          "rawValue": "1.07MB",
+          "success": true,
+          "threshold": "18 MB",
+          "thresholdLimit": "upper",
+          "value": "1.07 MB",
+          "type": "size"
+        },
+        {
+          "label": "dist/js/chunk-vendors.c1caf410.js",
+          "rawLabel": "/Users/mbao01/Workspace/Modus Create/Brownbag Events/vue-spa/dist/js/chunk-vendors.c1caf410.js",
+          "rawThreshold": 1048576,
+          "rawValue": "45.92KB",
+          "success": true,
+          "threshold": "1 MB",
+          "thresholdLimit": "upper",
+          "value": "45.92 KB",
+          "type": "size"
+        }
+      ],
+      "label": "Size Checks",
+      "rawLabel": "Size Checks",
+      "success": true,
+      "type": "size"
+    },
+    {
+      "data": [
+        {
+          "label": "Performance",
+          "rawLabel": "performance",
+          "rawThreshold": 64,
+          "rawValue": 0.99,
+          "threshold": 64,
+          "thresholdLimit": "lower",
+          "success": true,
+          "value": "99",
+          "type": "lighthouse"
+        },
+        {
+          "label": "Accessibility",
+          "rawLabel": "accessibility",
+          "rawThreshold": 90,
+          "rawValue": 0.9,
+          "threshold": 90,
+          "thresholdLimit": "lower",
+          "success": true,
+          "value": "90",
+          "type": "lighthouse"
+        },
+        {
+          "label": "Best Practices",
+          "rawLabel": "best-practices",
+          "rawThreshold": 92,
+          "rawValue": 1,
+          "threshold": 92,
+          "thresholdLimit": "lower",
+          "success": true,
+          "value": "100",
+          "type": "lighthouse"
+        },
+        {
+          "label": "SEO",
+          "rawLabel": "seo",
+          "rawThreshold": 100,
+          "rawValue": 0.91,
+          "threshold": 100,
+          "thresholdLimit": "lower",
+          "success": false,
+          "value": "91",
+          "type": "lighthouse"
+        },
+        {
+          "label": "Progressive Web App",
+          "rawLabel": "pwa",
+          "rawThreshold": 52,
+          "rawValue": 0.52,
+          "threshold": 52,
+          "thresholdLimit": "lower",
+          "success": true,
+          "value": "52",
+          "type": "lighthouse"
+        }
+      ],
+      "label": "Lighthouse Audits",
+      "rawLabel": "Lighthouse Audits",
+      "success": false,
+      "type": "lighthouse"
+    }
+  ],
+  "success": false
+}

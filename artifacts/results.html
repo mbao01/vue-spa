@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gimbal Report</title>
+  <style>
+    table {
+      border-spacing: 0;
+    }
+
+    thead th {
+      border-bottom: 1px solid #000;
+    }
+
+    tbody tr:nth-child(even) td {
+      background: #CCC;
+    }
+
+    thead th:nth-child(2),
+    thead th:nth-child(3),
+    tbody td:nth-child(2),
+    tbody td:nth-child(3) {
+      min-width: 100px;
+    }
+
+    tbody td:first-child {
+      padding: 0 5px;
+    }
+
+    thead th:last-child,
+    tbody td:last-child {
+      min-width: 75px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1 id="gimbal-report">Gimbal Report</h1>
+<h2 id="size-checks">Size Checks</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th align="center">Value</th>
+<th align="center">Threshold</th>
+<th align="center">Success</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>dist/favicon.ico</td>
+<td align="center">864 B</td>
+<td align="center">4 KB</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>dist/index.html</td>
+<td align="center">403 B</td>
+<td align="center">3 KB</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>dist</td>
+<td align="center">1.07 MB</td>
+<td align="center">3 MB</td>
+<td align="center">✓</td>
+</tr>
+</tbody></table>
+<h2 id="lighthouse-audits">Lighthouse Audits</h2>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th align="center">Value</th>
+<th align="center">Threshold</th>
+<th align="center">Success</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Performance</td>
+<td align="center">99</td>
+<td align="center">96</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>Accessibility</td>
+<td align="center">90</td>
+<td align="center">75</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>Best Practices</td>
+<td align="center">100</td>
+<td align="center">96</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>SEO</td>
+<td align="center">91</td>
+<td align="center">90</td>
+<td align="center">✓</td>
+</tr>
+<tr>
+<td>Progressive Web App</td>
+<td align="center">52</td>
+<td align="center">50</td>
+<td align="center">✓</td>
+</tr>
+</tbody></table>
+
+</body>
+
+</html>
