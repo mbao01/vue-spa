@@ -4,9 +4,10 @@ var GimbalPlugin = require("webpack-gimbal-plugin");
 var path = require("path");
 
 module.exports = {
-  configureWebpack: (config) => {
+  chainWebpack: (config) => {
     config.plugins.delete("prefetch");
-
+  },
+  configureWebpack: () => {
     if (process.env.NODE_ENV !== "production") return;
 
     return {
