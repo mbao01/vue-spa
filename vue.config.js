@@ -1,3 +1,4 @@
+var Critters = require("critters-webpack-plugin");
 var PrerenderSpaPlugin = require("prerender-spa-plugin");
 var path = require("path");
 
@@ -15,6 +16,13 @@ module.exports = {
           // List of routes to prerender
           routes: ["/", "/about", "/store"],
         }),
+        new Critters({
+          // Outputs: <link rel="preload" onload="this.rel='stylesheet'">
+          preload: "swap",
+    
+          // Don't inline critical font-face rules, but preload the font URLs:
+          preloadFonts: true,
+        }),
       ],
     };
   },
@@ -26,4 +34,3 @@ module.exports = {
     overlay: true,
     historyApiFallback: true,
   },
-};
