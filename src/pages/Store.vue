@@ -5,7 +5,7 @@
     <div
       class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-2 overflow-auto pb-5"
     >
-      <Product
+      <AsyncProduct
         v-for="(product, index) in products"
         :product="product"
         :key="index"
@@ -13,21 +13,26 @@
     </div>
 
     <div v-if="loading" class="flex justify-center pt-3 pb-8 bg-transparent">
-      <Loader />
+      <AsyncLoader />
     </div>
   </div>
 </template>
 
 <script>
-import Loader from "../components/Loader.vue";
-import Product from "../components/Product.vue";
-import { ref, onMounted, onUnmounted } from "vue";
+import { ref, onMounted, onUnmounted, defineAsyncComponent } from "vue";
 import { getProducts } from "../services/product-loader";
+
+const AsyncProduct = defineAsyncComponent(() =>
+  import("../components/Product.vue" /* webpackChunkName: "product" */)
+);
+const AsyncLoader = defineAsyncComponent(() =>
+  import("../components/Loader.vue" /* webpackChunkName: "loader" */)
+);
 
 export default {
   components: {
-    Loader,
-    Product,
+    AsyncLoader,
+    AsyncProduct,
   },
   setup() {
     const products = ref([]);

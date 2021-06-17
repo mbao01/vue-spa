@@ -1,10 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const Home = () => import(/* webpackChunkName: "home" */ "../pages/Home.vue");
+const Home = () =>
+  import(
+    /* webpackChunkName: "home" */ /* webpackPrefetch: true */ "../pages/Home.vue"
+  );
 const About = () =>
-  import(/* webpackChunkName: "about" */ "../pages/About.vue");
+  import(
+    /* webpackChunkName: "about" */ /* webpackPrefetch: true */ "../pages/About.vue"
+  );
 const Store = () =>
-  import(/* webpackChunkName: "store" */ "../pages/Store.vue");
+  import(
+    /* webpackChunkName: "store" */ /* webpackPrefetch: true */ "../pages/Store.vue"
+  );
 
 const routerHistory = createWebHistory();
 
