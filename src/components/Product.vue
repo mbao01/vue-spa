@@ -28,6 +28,8 @@ const AsyncImage = defineAsyncComponent(() =>
   import("../components/Image.vue" /* webpackChunkName: "image" */)
 );
 
+import { add } from "lodash";
+
 export default {
   name: "Product",
   props: {
@@ -35,7 +37,7 @@ export default {
   },
   computed: {
     accountInUSD() {
-      return "$" + this.product.price;
+      return "$" + add(this.product.price, 10);
     },
   },
   components: {
