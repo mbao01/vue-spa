@@ -12,8 +12,14 @@ jobs:
         with:
           node-version: "15"
 
-      - name: Check Dir
+      - name: Check Dir 1
         run: echo ~/
       
-      - name: Check Dir
+      - name: Check Dir 2
         run: pwd
+
+      - name: Check Dir 3
+        run: echo .
+      
+      - name: Check Dir 3
+        run: ls -al
