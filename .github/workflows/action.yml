@@ -13,7 +13,7 @@ jobs:
           node-version: "15"
 
       - name: Check Dir 1
-        run: echo ~/
+        run: cd public && ls -al
       
       - name: Check Dir 2
         run: pwd
